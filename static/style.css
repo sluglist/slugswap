@@ -57,3 +57,43 @@
     nav li a:hover {
         color: #ff99ff;
     }
+
+    /* Form-specific CSS */
+    .fatradio-button {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      size: 0px;
+    }
+
+    .fatradio-button+label {
+      border: 1px solid black;
+      background-color: lightblue;
+      padding-left: 5px;
+      padding-right: 5px;
+      white-space: nowrap;
+    }
+
+    #tabHaveWant {
+      white-space: nowrap;
+      z-index: 2;
+    }
+
+    .fatradio-button:checked+label {
+      border-top: 1px solid black;
+      border-left: 1px solid black;
+      border-right: 1px solid black;
+      border-bottom: 1px solid white;
+      background-color: white;
+    }
+
+    #formarea {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border: 1px solid black;
+      z-index: 1;
+    }
+
+    #idbookDesc {
+      width: 75%;
+    }
