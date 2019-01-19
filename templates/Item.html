@@ -1,0 +1,27 @@
+{% extends mainTemplate.html %}
+
+{% block content %}
+
+<img src={% url 'image' %} alt="image">
+
+{% bookTitle %}
+
+{% bookProps %}
+
+{% if isOwner %}
+<div id="manageItem">
+	<form action="/sold" method="post">
+	<input type="submit" value="Sold">
+	<!--<input type="button" value="Edit">-->
+{% endif %}
+
+<div id="postComment">
+	<form action="/comment" method="post">
+	Message Seller
+	<input type="textarea" name="message">
+				
+	<input type="submit" value="submit">
+</div>
+
+
+{% endblock %}
