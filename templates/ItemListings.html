@@ -1,12 +1,23 @@
+<div class="IgnoreNav">
 {% block content %}
+<head>
+<link rel="stylesheet" href="../static/style.css">
+</head>
 
 
+<div class="SideNavBar">
+<button>Want</button>
+<button>Have</button>
+<button>Books</button>
+
+</div>
 
 
+    <div class="ListContent">
+    {% block list %}
 
-
-
-
-
+    {% endlist %}
+    </div>
 
 {% endblock %}
+</div>
