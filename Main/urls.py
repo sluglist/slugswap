@@ -10,4 +10,6 @@ urlpatterns = [
     path('item/<uuid:id>', views.item, name='item'),
     path('inbox', views.inbox, name='inbox'),
     path('create/<slug:direction>', views.create, name='create')
+    path('sold', views.sold, name='sold')
+    path('comment', views.comment, name='comment')
 ]

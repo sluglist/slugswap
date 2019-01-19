@@ -19,3 +19,9 @@ def inbox(request):
 
 def create(request, direction):
     return HttpResponse('create')
+
+def sold(request):
+    return HttpResponse('sold')
+
+def comment(request, direction):
+    return HttpResponse('comment')
