@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from models import Book
+from Main.models import Book
 
 
 def index(request):
@@ -13,9 +13,9 @@ def items(request, direction, catagory=None):
     return HttpResponse('Items')
 
 def item(request, id):
-	item = Book.objects.get(pk=id)[0]
-	context = {'Book' : item}
-	return render(request, 'Item.html', context)
+    item = Book.objects.get(pk=id)[0]
+    context = {'Book' : item}
+    return render(request, 'Item.html', context)
     #return HttpResponse(item)
 
 
