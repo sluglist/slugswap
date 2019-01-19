@@ -10,4 +10,12 @@ class Book():
 	publisher = models.CharField(max_length=512)
 	hardcover = models.NullBooleanField()
 	version = models.CharField(max_length=128)
-	uuid = models.CharField(max_length=16)
+	id = models.CharField(max_length=16, primary_key=True)
+	sold = models.BooleanField()
+
+class Comment():
+	id = models.CharField(max_length=16, primary_key=True)
+	target = models.ForeignKey(Book, on_delete=models.CASCADE)
+	buyer = models.EmailField()
+	time = models.DateTimeField()
+	text = models.TextField()
