@@ -57,6 +57,7 @@
     nav li a:hover {
         color: #ff99ff;
     }
+<<<<<<< HEAD
 
     /* Form-specific CSS */
     .fatradio-button {
@@ -96,4 +97,27 @@
 
     #idbookDesc {
       width: 75%;
+=======
+    .flex-containerITEMLISTCONTAINER{
+        display: flex;
+        flex-wrap: wrap;
+        background-color: red;
+
+    }
+    .flex-containerITEMLISTCONTAINER > div{
+        background-color: gray;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        line-height: 50px;
+        font-size: 30px;
+
+    }
+    .flex-containerITEMLISTCONTAINER > div #Desc{
+        background-color: blue;
+        color: black;
+        margin: 10px;
+        font-size: 20px;
+
+>>>>>>> 5a390152c7b13e55d8c7d737a414ac0acab4f21a
     }
