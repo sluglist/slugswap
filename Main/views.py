@@ -16,3 +16,6 @@ def item(request, id):
 
 def inbox(request):
     return HttpResponse('inbox')
+
+def create(request, direction):
+    return HttpResponse('create')
