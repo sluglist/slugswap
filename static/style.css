@@ -57,3 +57,25 @@
     nav li a:hover {
         color: #ff99ff;
     }
+    .flex-containerITEMLISTCONTAINER{
+        display: flex;
+        flex-wrap: wrap;
+        background-color: red;
+
+    }
+    .flex-containerITEMLISTCONTAINER > div{
+        background-color: gray;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        line-height: 50px;
+        font-size: 30px;
+
+    }
+    .flex-containerITEMLISTCONTAINER > div #Desc{
+        background-color: blue;
+        color: black;
+        margin: 10px;
+        font-size: 20px;
+
+    }
