@@ -4,14 +4,29 @@
 
 <img src={% url 'image' %} alt="image"><img>
 
-{% bookTitle %}
+{{ Book.name }} by {{ Book.author }}
 
-{% bookProps %}
+{ % if Book.sold % }
+<b> Sorry, this book is sold! </b>
+{ % endif % }
 
-{% if isOwner %}
+ISBN: {{ Book.isbn }}
+Version Number: {{ Book.version }}
+Publisher: {{ Book.publisher }}
+{ % if Book.hardcover % }
+This is a hardcover version.
+{ % endif %}
+{ % if not Book.hardcover %}
+This is a softcover version.
+{ % endif % }
+
+This book is used in {{ % Book.class % }} classes. 
+
+
+{% if this.emid == Book.poster %}
 <div id="manageItem">
 	<form action="/sold" method="post">
-	<input type="submit" value="Sold">
+	<input type="submit" value="Sold" disabled = {{ Book.sold }}>
 	<!--<input type="button" value="Edit">-->
 	</form>
 </div>
