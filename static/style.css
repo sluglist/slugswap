@@ -79,3 +79,17 @@
         font-size: 20px;
 
     }
+    .IgnoreNav > .SideNavBar {
+        height: 10%;
+        width: 160px;
+        position: fixed;
+        z-index: 1;
+        top: 0; 
+        left: 0;
+        background-color: #228B22;
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+    .IgnoreNav {
+        margin-left: 160px;   
+    }
