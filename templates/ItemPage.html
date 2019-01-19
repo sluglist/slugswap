@@ -1,0 +1,16 @@
+{% block content %}
+    {% for item in items %}
+
+<div class="flex-containerITEMLISTCONTAINER">
+    <div>
+        <a href = ""><img src=""{{ item.image }} alt="Probably an item"{{ item.title }}</a>
+            <div id="Desc">
+                <p>
+                <b>{{ item.desc }}
+                </p>
+            </div>
+    </div>
+</div>
+
+{% endfor %}
+{% endblock %}
