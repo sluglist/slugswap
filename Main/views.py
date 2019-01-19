@@ -14,7 +14,9 @@ def items(request, direction, catagory=None):
 
 def item(request, id):
 	item = Book.objects.get(pk=id)[0]
-    return HttpResponse(item)
+	context = {'Book' : item}
+	return render(request, 'Item.html', context)
+    #return HttpResponse(item)
 
 
 def inbox(request):
