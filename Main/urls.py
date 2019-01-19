@@ -9,4 +9,5 @@ urlpatterns = [
     path('items/<slug:direction>', views.items, name='items'),
     path('item/<uuid:id>', views.item, name='item'),
     path('inbox', views.inbox, name='inbox'),
+    path('create/<slug:direction>', views.create, name='create')
 ]
