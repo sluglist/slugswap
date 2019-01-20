@@ -1,56 +1,57 @@
 {% extends 'mainTemplate.html' %}
 
 {% block content %}
-	<main>
-			<form action="/create" method="post">
-				<div id="tabHaveWant">
-					<input id="tabHave" class="fatradio-button" type="radio" name="bookItemType" {% if direction == 'have' %}checked="checked" {% endif %}/>
-					<label for="tabHave">I Have...</label>
-					<input id="tabWant" class="fatradio-button" type="radio" name="bookItemType" {% if direction == 'want' %}checked="checked" {% endif %}/>
-					<label for="tabWant"> I Want...</label>
-				</div>
-				<div id="formarea">
-					Upload Picture
-					<br>
-					Book Title
-					<br>
-					Author
-					<br>
-					Class
-					<br>
-					ISBN
-					<br>
-					Edition
-					<br>
-					Publisher
-					<br>
-					<input type="checkbox" name="bookCoverHard">Hardcover
-					<br>
-					Description
-					<br>
-					<br>	
+    <main>
+        <form action="/create/{{ direction }}" method="post">
+            {% csrf_token %}
+                <div id="tabHaveWant">
+                    <input id="tabHave" class="fatradio-button" type="radio" name="bookItemType" {% if direction == 'have' %}checked="checked" {% endif %}/>
+                    <label for="tabHave">I Have...</label>
+                    <input id="tabWant" class="fatradio-button" type="radio" name="bookItemType" {% if direction == 'want' %}checked="checked" {% endif %}/>
+                    <label for="tabWant"> I Want...</label>
+                </div>
+                <div id="formarea">
+                    Upload Picture
+                    <br>
+                    Book Title
+                    <br>
+                    Author
+                    <br>
+                    Class
+                    <br>
+                    ISBN
+                    <br>
+                    Edition
+                    <br>
+                    Publisher
+                    <br>
+                    <input type="checkbox" name="bookCoverHard">Hardcover
+                    <br>
+                    Description
+                    <br>
+                    <br>    
 
-					<button onclick="uploadImage()">Upload Image</button>
-					<br>
-					<input type="text" name="bookName">
-					<br>
-					<input type="text" name="bookAuthor">
-					<br>
-					<input type="text" name="bookClass">
-					<br>
-					<input type="text" name="bookISBN">
-					<br>
-					<input type="text" name="bookVersion">
-					<br>
-					<input type="text" name="bookPublisher">
-					<br>
-					<input type="checkbox" name="bookCoverSoft">Paperback
-					<br>
-					<textarea name="bookDesc" cols="50" rows="5">Put any additional information here</textarea>
-				</div>
-				<div class="center">
-					<input type="submit" value="submit">
-				</div>
-			</form>
-		</main>
+                    <button onclick="uploadImage()">Upload Image</button>
+                    <br>
+                    <input type="text" name="bookName">
+                    <br>
+                    <input type="text" name="bookAuthor">
+                    <br>
+                    <input type="text" name="bookClass">
+                    <br>
+                    <input type="text" name="bookISBN">
+                    <br>
+                    <input type="text" name="bookVersion">
+                    <br>
+                    <input type="text" name="bookPublisher">
+                    <br>
+                    <input type="checkbox" name="bookCoverSoft">Paperback
+                    <br>
+                    <textarea name="bookDesc" cols="50" rows="5">Put any additional information here</textarea>
+                </div>
+                <div class="center">
+                    <button type="submit" formmethod="post">Submit
+                </div>
+            </form>
+        </main>
 {% endblock %}
