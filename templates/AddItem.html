@@ -1,10 +1,12 @@
+{% extends 'mainTemplate.html' %}
+
 {% block content %}
 	<main>
 			<form action="/create" method="post">
 				<div id="tabHaveWant">
-					<input id="tabHave" class="fatradio-button" type="radio" name="bookItemType" checked="checked"/>
+					<input id="tabHave" class="fatradio-button" type="radio" name="bookItemType" {% if direction == 'have' %}checked="checked" {% endif %}/>
 					<label for="tabHave">I Have...</label>
-					<input id="tabWant" class="fatradio-button" type="radio" name="bookItemType" />
+					<input id="tabWant" class="fatradio-button" type="radio" name="bookItemType" {% if direction == 'want' %}checked="checked" {% endif %}/>
 					<label for="tabWant"> I Want...</label>
 				</div>
 				<div id="formarea">
