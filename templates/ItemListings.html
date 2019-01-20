@@ -1,4 +1,4 @@
-<div class="IgnoreNav">
+{% extends 'mainTemplate.html' %}
 {% block content %}
 <head>
 <link rel="stylesheet" href="../static/style.css">
@@ -16,8 +16,7 @@
     <div class="ListContent">
     {% block list %}
 
-    {% endlist %}
+    {% endblock %}
     </div>
 
 {% endblock %}
-</div>

@@ -4,7 +4,13 @@ from Main.models import Book
 
 
 def index(request):
-    return HttpResponse('Home')
+    context = {
+        'user_wants': [],
+        'user_has': [],
+        'others_want': [],
+        'others_have': [],
+    }
+    return render(request, 'index.html', context)
 
 def login(request):
     return HttpResponse('Login')
