@@ -1,10 +1,16 @@
 from django.urls import path
+from django.conf.urls import include
+from django.contrib.auth import views as auth_views
+from django.conf import settings
 
 from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
     path('login', views.login, name='login'),
+    path('', include('social_django.urls', namespace='social')),
+    path(r'^logout/', auth_views.LogoutView.as_view(), name='logout'),
+
     path('items/<slug:direction>/<slug:catagory>', views.items, name='items'),
     path('items/<slug:direction>', views.items, name='items'),
     path('item/<uuid:id>', views.item, name='item'),
