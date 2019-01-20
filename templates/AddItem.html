@@ -1,35 +1,54 @@
 {% block content %}
 	<main>
-		<form action="/create" method="post">
-			<div id="tabHaveWant">
-				<input id="tabHave" class="fatradio-button" type="radio" name="bookHaveItem" value="I Have..." checked/>
-				<label for="tabHave">I Have...</label>
-				<input id="tabWant" class="fatradio-button" type="radio" name="bookWantItem" value="I Want..."/>
-				<label for="tabWant"> I Want...</label>
-			</div>
-			<div id="formarea">
-				Book Title
-				<input type="text" name="bookName"><br>
-				Author
-				<input type="text" name="bookAuthor"><br>
-				Class
-				<input type="text" name="bookClass"><br>
-				ISBN (Inputting the ISBN number significantly increases matching)
-				<input type="text" name="bookISBN"><br>
-				Version
-				<input type="text" name="bookVersion"><br>
-				Publisher
-				<input type="text" name="bookPublisher"><br>
-				Hardcover
-				<input type="radio" name="bookCoverHard">
-				Softcover
-				<input type="radio" name="bookCoverSoft"><br>
-				Upload Picture (TODO)<br>
+			<form action="/create" method="post">
+				<div id="tabHaveWant">
+					<input id="tabHave" class="fatradio-button" type="radio" name="bookItemType" checked="checked"/>
+					<label for="tabHave">I Have...</label>
+					<input id="tabWant" class="fatradio-button" type="radio" name="bookItemType" />
+					<label for="tabWant"> I Want...</label>
+				</div>
+				<div id="formarea">
+					Upload Picture
+					<br>
+					Book Title
+					<br>
+					Author
+					<br>
+					Class
+					<br>
+					ISBN
+					<br>
+					Edition
+					<br>
+					Publisher
+					<br>
+					<input type="checkbox" name="bookCoverHard">Hardcover
+					<br>
+					Description
+					<br>
+					<br>	
 
-				Description and Contact Information
-				<input id="idbookDesc" type="text" name="bookDesc" value="Put any additional information here">
-				<input type="submit" value="submit">
-			</div>
-		</form>
-	</main>
+					<button onclick="uploadImage()">Upload Image</button>
+					<br>
+					<input type="text" name="bookName">
+					<br>
+					<input type="text" name="bookAuthor">
+					<br>
+					<input type="text" name="bookClass">
+					<br>
+					<input type="text" name="bookISBN">
+					<br>
+					<input type="text" name="bookVersion">
+					<br>
+					<input type="text" name="bookPublisher">
+					<br>
+					<input type="checkbox" name="bookCoverSoft">Paperback
+					<br>
+					<textarea name="bookDesc" cols="50" rows="5">Put any additional information here</textarea>
+				</div>
+				<div class="center">
+					<input type="submit" value="submit">
+				</div>
+			</form>
+		</main>
 {% endblock %}
