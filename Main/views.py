@@ -10,7 +10,16 @@ def login(request):
     return HttpResponse('Login')
 
 def items(request, direction, catagory=None):
-    return HttpResponse('Items')
+    """Django reguest object"""
+    if direction == 'want':
+        checker = True
+    else:
+        checker = False
+        
+    testQuery = Book.objects.filter(want = checker).all()
+    context = {'items' : testQuery}
+    
+    return render(request, 'ItemListings.html', context);
 
 def item(request, id):
     id = str(id)
