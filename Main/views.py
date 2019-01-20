@@ -6,13 +6,28 @@ import uuid
 
 
 def index(request):
-    return HttpResponse('Home')
+    context = {
+        'user_wants': [],
+        'user_has': [],
+        'others_want': [],
+        'others_have': [],
+    }
+    return render(request, 'index.html', context)
 
 def login(request):
     return HttpResponse('Login')
 
 def items(request, direction, catagory=None):
-    return HttpResponse('Items')
+    """Django reguest object"""
+    if direction == 'want':
+        checker = True
+    else:
+        checker = False
+        
+    testQuery = Book.objects.filter(want = checker).all()
+    context = {'items' : testQuery}
+    
+    return render(request, 'ItemListings.html', context);
 
 def item(request, id):
     id = str(id)

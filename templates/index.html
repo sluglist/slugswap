@@ -1,0 +1,26 @@
+{% extends 'mainTemplate.html' %}
+
+{% block content %}
+<main class="cardview-host">
+    <div class="card split-card non-card">
+        <div class="split-left">
+            <div><a href="/create/want" class="button">Add an item I want</a></div>
+            {% include 'ItemPage.html' with items=user_wants %}
+        </div>
+        <div class="split-right">
+            <div><a href="/create/have" class="button">Add an item I have</a></div>
+            {% include 'ItemPage.html' with items=user_has %}
+        </div>
+    </div>
+    <div class="card split-card non-card">
+        <div class="split-left">
+            {% include 'ItemPage.html' with items=others_have %}
+            <div><a href="/items/want">More books like what you want</a></div>
+        </div>
+        <div class="split-right">
+            {% include 'ItemPage.html' with items=others_want %}
+            <div><a href="/items/have">More requests for books you have</a></div>
+        </div>
+    </div>
+</main>
+{% endblock %}
