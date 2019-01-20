@@ -11,43 +11,80 @@
                     <label for="tabWant"> I Want...</label>
                 </div>
                 <div id="formarea">
-                    Upload Picture
-                    <br>
-                    Book Title
-                    <br>
-                    Author
-                    <br>
-                    Class
-                    <br>
-                    ISBN
-                    <br>
-                    Edition
-                    <br>
-                    Publisher
-                    <br>
-                    <input type="checkbox" name="bookCoverHard">Hardcover
-                    <br>
-                    Description
-                    <br>
-                    <br>
-
-                    <button onclick="uploadImage()">Upload Image</button>
-                    <br>
-                    <input type="text" name="bookName">
-                    <br>
-                    <input type="text" name="bookAuthor">
-                    <br>
-                    <input type="text" name="bookClass">
-                    <br>
-                    <input type="text" name="bookISBN">
-                    <br>
-                    <input type="text" name="bookVersion">
-                    <br>
-                    <input type="text" name="bookPublisher">
-                    <br>
-                    <input type="checkbox" name="bookCoverSoft">Paperback
-                    <br>
-                    <textarea name="bookDesc" cols="50" rows="5">Put any additional information here</textarea>
+                    <table>
+                        <!--<tr>
+                            <td>
+                                <label for="image">Upload Picture</label>
+                            </td>
+                            <td>
+                                <input id="image" type="file"></button>
+                            </td>
+                        </tr>-->
+                        <tr>
+                            <td>
+                                <label for="name">Book Title</label>
+                            </td>
+                            <td>
+                                <input id="name" type="text" name="bookName">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="author">Author</label>
+                            </td>
+                            <td>
+                                <input id="author" type="text" name="bookAuthor">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="class">Class</label>
+                            </td>
+                            <td>
+                                <input id="class" type="text" name="bookClass">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="isbn">ISBN</label>
+                            </td>
+                            <td>
+                                <input id="isbn" type="text" name="bookISBN">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="edition">Edition</label>
+                            </td>
+                            <td>
+                                <input id="edition" type="text" name="bookVersion">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="publisher">Publisher</label>
+                            </td>
+                            <td>
+                                <input id="publisher" type="text" name="bookPublisher">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="hardcover">Hardcover</label>
+                            </td>
+                            <td>
+                                <input id="hardcover" type="checkbox" name="bookCoverHard">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="paperback">Paperback</label>
+                            </td>
+                            <td>
+                                <input id="paperback" type="checkbox" name="bookCoverSoft">
+                            </td>
+                        </tr>
+                    </table>
                 </div>
                 <div class="center">
                     <button type="submit" formmethod="post">Submit
