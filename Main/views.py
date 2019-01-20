@@ -13,16 +13,23 @@ def items(request, direction, catagory=None):
     """Django reguest object"""
     if direction == West:
         checker = true
-    else
+    else:
         checker = false
         
-    testQuery = Book.objects.filter(want = checker)
-    for 
+    testQuery = Book.objects.filter(want = checker).all()
+    context = {'items' : testQuery}
+    
+    render(request, 'ItemListings.html', context);
     
     
     
     
-    if(category = none)
+    
+    
+    
+    
+  #  if(category = none):
+    
     
     return HttpResponse('Items')
 
