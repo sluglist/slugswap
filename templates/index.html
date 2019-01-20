@@ -4,20 +4,24 @@
 <main class="cardview-host">
     <div class="card split-card non-card">
         <div class="split-left">
+            <h2>What I want:</h2>
             <div><a href="/create/want" class="button">Add an item I want</a></div>
             {% include 'ItemPage.html' with items=user_wants %}
         </div>
         <div class="split-right">
+            <h2>What I have:</h2>
             <div><a href="/create/have" class="button">Add an item I have</a></div>
             {% include 'ItemPage.html' with items=user_has %}
         </div>
     </div>
     <div class="card split-card non-card">
         <div class="split-left">
+            <h2>Books like what you want:</h2>
             {% include 'ItemPage.html' with items=others_have %}
             <div><a href="/items/want">More books like what you want</a></div>
         </div>
         <div class="split-right">
+            <h2>Requests for your books:</h2>
             {% include 'ItemPage.html' with items=others_want %}
             <div><a href="/items/have">More requests for books you have</a></div>
         </div>

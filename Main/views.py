@@ -7,11 +7,17 @@ import uuid
 def index(request):
     user_wants = Book.objects.filter(want=True).all()
     user_has = Book.objects.filter(want=False).all()
+    others_have = []
+    others_want = []
+    for w in user_wants:
+        others_have += Book.objects.filter(name=w.name, want=False).all()
+    for w in user_has:
+        others_want += Book.objects.filter(name=w.name, want=True).all()
     context = {
         'user_wants': user_wants,
         'user_has': user_has,
-        'others_want': [],
-        'others_have': [],
+        'others_want': others_want,
+        'others_have': others_have,
     }
     return render(request, 'index.html', context)
 
@@ -57,11 +63,13 @@ def create(request, direction):
                 listing.hardcover = True
         else:
             listing.hardcover = None
-        listing.want = request.POST.get('bookItemType')
+        listing.want = (request.POST.get('bookItemType') == 'want')
         listing.version = request.POST.get('bookVersion')
         listing.id = id
         listing.sold = False
         # listing.POSTer =  TODO NEED LOGIN
+        print(listing.__dict__)
+        listing.save()
         return redirect('/item/' + str(id))
     elif request.method == "GET":
         context = {'direction' : direction}
