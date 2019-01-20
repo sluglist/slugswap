@@ -24,7 +24,11 @@ def inbox(request):
     return HttpResponse('inbox')
 
 def create(request, direction):
-    return HttpResponse('create')
+	if request.method == "POST":
+		pass
+	elif request.method == "GET":
+		context = {'direction' : direction}
+		return render(request, 'AddItem.html', context)
 
 def sold(request):
     return HttpResponse('sold')
