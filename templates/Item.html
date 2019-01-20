@@ -1,26 +1,25 @@
-{% extends mainTemplate.html %}
+{% extends 'mainTemplate.html' %}
 
 {% block content %}
 
-<img src={% url 'image' %} alt="image"><img>
+<img src="#" alt="image"><img>
 
 {{ Book.name }} by {{ Book.author }}
 
-{ % if Book.sold % }
-<b> Sorry, this book is sold! </b>
-{ % endif % }
+{% if Book.sold %}
+<b> Sorry, this book is sold! </b><br/>
+{% endif %}
 
-ISBN: {{ Book.isbn }}
-Version Number: {{ Book.version }}
-Publisher: {{ Book.publisher }}
-{ % if Book.hardcover % }
-This is a hardcover version.
-{ % endif %}
-{ % if not Book.hardcover %}
-This is a softcover version.
-{ % endif % }
-
-This book is used in {{ % Book.class % }} classes. 
+ISBN: {{ Book.isbn }}<br/>
+Version Number: {{ Book.version }}<br/>
+Publisher: {{ Book.publisher }}<br/>
+{% if Book.hardcover %}
+This is a hardcover version.<br/>
+{% endif %}
+{% if not Book.hardcover %}
+This is a softcover version.<br/>
+{% endif %}
+This book is used in {{ Book.course }} classes. 
 
 
 {% if this.emid == Book.poster %}

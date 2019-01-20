@@ -11,12 +11,12 @@ class Book(models.Model):
 	hardcover = models.NullBooleanField()
 	want = models.BooleanField()
 	version = models.CharField(max_length=128)
-	id = models.CharField(max_length=16, primary_key=True)
+	id = models.CharField(max_length=36, primary_key=True)
 	sold = models.BooleanField()
 	poster = models.EmailField()
 
 class Comment(models.Model):
-	id = models.CharField(max_length=16, primary_key=True)
+	id = models.CharField(max_length=36, primary_key=True)
 	target = models.ForeignKey(Book, on_delete=models.CASCADE)
 	poster = models.EmailField()
 	buyer = models.EmailField()

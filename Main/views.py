@@ -13,7 +13,8 @@ def items(request, direction, catagory=None):
     return HttpResponse('Items')
 
 def item(request, id):
-    item = Book.objects.get(pk=id)[0]
+    id = str(id)
+    item = Book.objects.get(pk=id)
     context = {'Book' : item}
     return render(request, 'Item.html', context)
     #return HttpResponse(item)
