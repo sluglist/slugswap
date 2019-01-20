@@ -9,28 +9,27 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
     <title>slugswap</title>
   </head>
-  
   <body>
     <div class="wrapper">
-    	<nav>
-      		<ul class="nav">
- 	 	        <li>
-          			<a href="index.html"> SlugSwap Icon </a>
-		        </li>
-        		<li>
-          			<a href="listings/want.html"> What Others Want Icon </a>
-        		</li>   
-        		<li>
-		            <a href="listings/have.html.html"> What Others Have Icon </a>
-        		</li>
-		        <li class="nav-icon">
-          			<a href="inbox.html" <i class="fa fa-envelope"></i></a>
-		        </li>
-      		</ul>
-    	</nav>
+        <nav>
+          <ul class="nav">
+            <li class="nav-icon">
+                <a href="index.html">
+                  <img src="{% static "slug.png" %}" id="logo"/>
+                </a>
+            </li>
+            <li>
+                <a href="listings/want.html" class="test"> What Others<br>Want</a>
+            </li>   
+            <li>
+                <a href="listings/have.html.html">What Others<br>Have</a>
+            </li>
+            <li class="nav-icon">
+                <a href="inbox.html" <i class="fa fa-envelope"></i></a>
+            </li>
+          </ul>
+      </nav>
+        {% block content %}
+        {% endblock %}
     </div>
-
-    {% block content %}
-    {% endblock %}
-
  </body>

@@ -1,17 +1,31 @@
-{% extends mainTemplate.html %}
+{% extends 'mainTemplate.html' %}
 
 {% block content %}
+<main>
+<img src="#" alt="listing image"><img></br>
 
-<img src={% url 'image' %} alt="image"><img>
+{{ Book.name }} by {{ Book.author }}
 
-{% bookTitle %}
+{% if Book.sold %}
+<b> Sorry, this book is sold! </b><br/>
+{% endif %}
 
-{% bookProps %}
+ISBN: {{ Book.isbn }}<br/>
+Version Number: {{ Book.version }}<br/>
+Publisher: {{ Book.publisher }}<br/>
+{% if Book.hardcover %}
+This is a hardcover version.<br/>
+{% endif %}
+{% if not Book.hardcover %}
+This is a softcover version.<br/>
+{% endif %}
+This book is used in {{ Book.course }} classes. 
 
-{% if isOwner %}
+
+{% if this.emid == Book.poster %}
 <div id="manageItem">
 	<form action="/sold" method="post">
-	<input type="submit" value="Sold">
+	<input type="submit" value="Sold" disabled = {{ Book.sold }}>
 	<!--<input type="button" value="Edit">-->
 	</form>
 </div>
@@ -25,6 +39,5 @@
 	<input type="submit" value="submit">
 	</form>
 </div>
-
-
+</main>
 {% endblock %}
