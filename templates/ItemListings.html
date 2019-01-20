@@ -1,5 +1,5 @@
 {% extends 'mainTemplate.html' %}
-{% include 'ItemPage.html' %}
+
 <div class="IgnoreNav">
 {% block content %}
 
@@ -12,9 +12,7 @@
 
 
     <div class="ListContent">
-    {% block list %}
-
-    {% endblock %}
+        {% include 'ItemPage.html' %}
     </div>
 
 {% endblock %}

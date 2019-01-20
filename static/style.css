@@ -121,7 +121,6 @@
     .flex-containerITEMLISTCONTAINER{
         display: flex;
         flex-wrap: wrap;
-        background-color: red;
 
     }
     .flex-containerITEMLISTCONTAINER > div{
