@@ -1,8 +1,8 @@
 {% extends 'mainTemplate.html' %}
 
 {% block content %}
-
-<img src="#" alt="image"><img>
+<main>
+<img src="#" alt="listing image"><img></br>
 
 {{ Book.name }} by {{ Book.author }}
 
@@ -39,6 +39,5 @@ This book is used in {{ Book.course }} classes.
 	<input type="submit" value="submit">
 	</form>
 </div>
-
-
+</main>
 {% endblock %}
