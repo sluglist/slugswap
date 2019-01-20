@@ -1,23 +1,16 @@
-<div class="IgnoreNav">
+{% extends 'mainTemplate.html' %}
 {% block content %}
-<head>
-<link rel="stylesheet" href="../static/style.css">
-</head>
-
 
 <div class="SideNavBar">
-<button>Want</button>
-<button>Have</button>
-<button>Books</button>
+<a href="items/want"><p>Want</p></a>
+<a href="items/have"><p>Have</p></a>
+
 
 </div>
 
 
     <div class="ListContent">
-    {% block list %}
-
-    {% endlist %}
+        {% include 'ItemPage.html' %}
     </div>
 
 {% endblock %}
-</div>
