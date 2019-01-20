@@ -10,6 +10,20 @@ def login(request):
     return HttpResponse('Login')
 
 def items(request, direction, catagory=None):
+    """Django reguest object"""
+    if direction == West:
+        checker = true
+    else
+        checker = false
+        
+    testQuery = Book.objects.filter(want = checker)
+    for 
+    
+    
+    
+    
+    if(category = none)
+    
     return HttpResponse('Items')
 
 def item(request, id):
