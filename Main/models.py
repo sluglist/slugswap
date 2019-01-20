@@ -3,14 +3,14 @@ from django.db import models
 # Create your models here.
 
 class Book(models.Model):
-    isbn = models.CharField(max_length=16)
-    name = models.CharField(max_length=512)
-    author = models.CharField(max_length=256)
-    course = models.CharField(max_length=128)
-    publisher = models.CharField(max_length=512)
+    isbn = models.CharField(max_length=16, blank=True, null=True)
+    name = models.CharField(max_length=512, blank=True, null=True)
+    author = models.CharField(max_length=256, blank=True, null=True)
+    course = models.CharField(max_length=128, blank=True, null=True)
+    publisher = models.CharField(max_length=512, blank=True, null=True)
     hardcover = models.NullBooleanField()
     want = models.BooleanField()
-    version = models.CharField(max_length=128)
+    version = models.CharField(max_length=128, blank=True, null=True)
     id = models.CharField(max_length=36, primary_key=True)
     sold = models.BooleanField()
     poster = models.EmailField()

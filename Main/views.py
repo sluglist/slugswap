@@ -57,11 +57,13 @@ def create(request, direction):
                 listing.hardcover = True
         else:
             listing.hardcover = None
-        listing.want = request.POST.get('bookItemType')
+        listing.want = (request.POST.get('bookItemType') == 'want')
         listing.version = request.POST.get('bookVersion')
         listing.id = id
         listing.sold = False
         # listing.POSTer =  TODO NEED LOGIN
+        print(listing.__dict__)
+        listing.save()
         return redirect('/item/' + str(id))
     elif request.method == "GET":
         context = {'direction' : direction}
