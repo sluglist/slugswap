@@ -1,156 +1,153 @@
-  :root {
+:root {
     --main-color: Goldenrod;
     --secondary-color: white;
     --tertiary-color: #454dcd;
-  }
+}
 
-  body {
-      width: 100%;
-      height: 100%;
-      font-size: 4vmin;
-      font-color: var(--tertiary-color);
-      margin: 0;
-      background: var(--secondary-color);
-      overflow:auto;
-  }
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 4vmin;
+    font-color: var(--tertiary-color);
+    margin: 0;
+    background: var(--secondary-color);
+    overflow:auto;
+}
 
-  .wrapper {
-      display: grid;
-      height: 100vh;
-      grid-template-rows: 8vh auto 8vh;
-  }
+.wrapper {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 8vh auto 8vh;
+}
 
-  main {
-      margin: auto;
-      display: inline-block;
-      vertical-align: middle;
-  }
+main {
+    margin: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
 
-  .center {
+.center {
     text-align: center;
-  }
+}
 
-  nav {
-        border-bottom: 3px solid var(--tertiary-color);
-        background: var(--secondary-color);
-        z-index: 1;
-    }
+nav {
+    border-bottom: 3px solid var(--tertiary-color);
+    background: var(--secondary-color);
+    z-index: 1;
+}
 
-    nav ul {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-    }
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
 
-    nav li {
-        float: left;
-    }
+nav li {
+    float: left;
+}
 
-    nav li:last-child {
-        float: right;
-    }
+nav li:last-child {
+    float: right;
+}
 
-    .nav-icon {
-        font-size: 6vmin;
-    }
+.nav-icon {
+    font-size: 6vmin;
+}
 
-    #logo {
-        height: 14vmin;
-        width: 14vmin; 
-    }
+#logo {
+    height: 14vmin;
+    width: 14vmin; 
+}
 
 
-    nav li a {
-        display: block;
-        color: var(--main-color);
-        text-align: center;
-        padding: 1vh 2vw;
-        font-size: 3vmin;
-        text-decoration: none;
-    }
+nav li a {
+    display: block;
+    color: var(--main-color);
+    text-align: center;
+    padding: 1vh 2vw;
+    font-size: 3vmin;
+    text-decoration: none;
+}
 
-    nav li a:hover {
-        color: #454dcd;
-    }
+nav li a:hover {
+    color: #454dcd;
+}
 
-    /* Form-specific CSS */
-    .fatradio-button {
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      size: 0px;
-    }
+/* Form-specific CSS */
+.fatradio-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    size: 0px;
+}
 
-    .fatradio-button+label {
-      border: 1px solid black;
-      background-color: var(--tertiary-color);
-      color: var(--secondary-color);
-      padding-left: 5px;
-      padding-right: 5px;
-      white-space: nowrap;
-    }
+.fatradio-button+label {
+  border: 1px solid black;
+  background-color: var(--tertiary-color);
+  color: var(--secondary-color);
+  padding-left: 5px;
+  padding-right: 5px;
+  white-space: nowrap;
+}
 
-    #tabHaveWant {
-      white-space: nowrap;
-      z-index: 2;
-    }
+#tabHaveWant {
+    white-space: nowrap;
+    z-index: 2;
+}
 
-    .fatradio-button:checked+label {
-      border-top: 1px solid black;
-      border-left: 1px solid black;
-      border-right: 1px solid black;
-      border-bottom: 2px solid var(--main-color);
-      background-color: var(--main-color);
-      color: black;
-    }
+.fatradio-button:checked+label {
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 2px solid var(--main-color);
+    background-color: var(--main-color);
+    color: black;
+}
 
-    #formarea {
-      background: var(--main-color);
-      width: 100%;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      border: 1px solid black;
-      z-index: 1;
-      column-count: 2;
-    }
+#formarea {
+    background: var(--main-color);
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid black;
+    z-index: 1;
+    column-count: 2;
+}
 
-    #formarea input[type=text], textarea {
-      width: 95%;  
-    }
+#formarea input[type=text], textarea {
+    width: 95%;  
+}
 
-    .flex-containerITEMLISTCONTAINER{
-        display: flex;
-        flex-wrap: wrap;
-        background-color: red;
-
-    }
-    .flex-containerITEMLISTCONTAINER > div{
-        background-color: gray;
-        width: 100px;
-        margin: 10px;
-        text-align: center;
-        line-height: 50px;
-        font-size: 30px;
-
-    }
-    .flex-containerITEMLISTCONTAINER > div #Desc{
-        background-color: blue;
-        color: black;
-        margin: 10px;
-        font-size: 20px;
-
-    }
-    .IgnoreNav > .SideNavBar {
-        height: 10%;
-        width: 160px;
-        position: fixed;
-        z-index: 1;
-        top: 0; 
-        left: 0;
-        background-color: #228B22;
-        overflow-x: hidden;
-        padding-top: 20px;
-    }
-    .IgnoreNav {
-        margin-left: 160px;   
-    }
+.flex-containerITEMLISTCONTAINER{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: red;
+}
+.flex-containerITEMLISTCONTAINER > div{
+    background-color: gray;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+}
+.flex-containerITEMLISTCONTAINER > div #Desc{
+    background-color: blue;
+    color: black;
+    margin: 10px;
+    font-size: 20px;
+}
+.IgnoreNav > .SideNavBar {
+    height: 10%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0; 
+    left: 0;
+    background-color: #228B22;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+.IgnoreNav {
+    margin-left: 160px;
+}
