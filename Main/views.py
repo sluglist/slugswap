@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from Main.models import Book
 
 
 def index(request):
@@ -12,7 +13,12 @@ def items(request, direction, catagory=None):
     return HttpResponse('Items')
 
 def item(request, id):
-    return HttpResponse('item')
+    id = str(id)
+    item = Book.objects.get(pk=id)
+    context = {'Book' : item}
+    return render(request, 'Item.html', context)
+    #return HttpResponse(item)
+
 
 def inbox(request):
     return HttpResponse('inbox')
