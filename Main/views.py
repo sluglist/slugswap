@@ -16,6 +16,11 @@ def login(request):
 def logout(request):
     logout(request)
     return HttpResponse('TestingLogout')
+def index(request):
+    return HttpResponse('Home')
+
+def login(request):
+    return HttpResponse('Login')
 
 def items(request, direction, catagory=None):
     """Django reguest object"""
