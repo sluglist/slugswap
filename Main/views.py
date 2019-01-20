@@ -4,11 +4,12 @@ from django.http import HttpResponse
 from Main.models import Book
 import uuid
 
-
 def index(request):
+    user_wants = Book.objects.filter(want=True).all()
+    user_has = Book.objects.filter(want=False).all()
     context = {
-        'user_wants': [],
-        'user_has': [],
+        'user_wants': user_wants,
+        'user_has': user_has,
         'others_want': [],
         'others_have': [],
     }
