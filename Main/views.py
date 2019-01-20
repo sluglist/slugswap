@@ -19,19 +19,7 @@ def items(request, direction, catagory=None):
     testQuery = Book.objects.filter(want = checker).all()
     context = {'items' : testQuery}
     
-    render(request, 'ItemListings.html', context);
-    
-    
-    
-    
-    
-    
-    
-    
-  #  if(category = none):
-    
-    
-    return HttpResponse('Items')
+    return render(request, 'ItemListings.html', context);
 
 def item(request, id):
     id = str(id)
