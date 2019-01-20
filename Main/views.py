@@ -11,10 +11,10 @@ def login(request):
 
 def items(request, direction, catagory=None):
     """Django reguest object"""
-    if direction == West:
-        checker = true
+    if direction == 'want':
+        checker = True
     else:
-        checker = false
+        checker = False
         
     testQuery = Book.objects.filter(want = checker).all()
     context = {'items' : testQuery}
